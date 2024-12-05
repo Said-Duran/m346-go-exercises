@@ -10,15 +10,19 @@ type FullName struct {
 
 type Profile struct {
 	// TODO: embed full name and birth date information
+	FirstName        string
+	LastName         string
 	NumberOfSiblings byte
-	ZodiacSign       rune
+	ZodiacSign       string
 }
 
 func main() {
 	var me = Profile{
 		// TODO: set name and birth date information
-		NumberOfSiblings: 0,   // TODO: adjust
-		ZodiacSign:       ' ', // TODO: adjust
+		FirstName:        "Said",
+		LastName:         "Duran",
+		NumberOfSiblings: 4,       // TODO: adjust
+		ZodiacSign:       "Libra", // TODO: adjust
 	}
 	fmt.Println(me)
 

@@ -19,6 +19,43 @@ const (
 
 func outputWithZodiacSign(p Person) {
 	var zodiacSign rune = '?'
+    
+	if p.Day && p.Month == 12, 2 {
+		zodiacSign == Aries 
+	}
+	else if p.Day && p.Month == 12, 3 {
+		zodiacSign == Taurus 
+	}
+	else if p.Day && p.Month == 12, 4 {
+		zodiacSign == Gemini 
+	}
+	else if p.Day && p.Month == 12, 5 {
+		zodiacSign == Cancer 
+	}
+	else if p.Day && p.Month == 12, 6 {
+		zodiacSign == Leo 
+	}
+	else if p.Day && p.Month == 12, 7 {
+		zodiacSign == Virgo 
+	}
+	else if p.Day && p.Month == 12, 8 {
+		zodiacSign == Libra 
+	}
+	else if p.Day && p.Month == 12, 9 {
+		zodiacSign == Scorpius 
+	}
+	else if p.Day && p.Month == 12, 10 {
+		zodiacSign == Saggittarus 
+	}
+	else if p.Day && p.Month == 12, 11 {
+		zodiacSign == Capricornus 
+	}
+	else if p.Day && p.Month == 12, 12 {
+		zodiacSign == Aquarius 
+	}
+	else if p.Day && p.Month == 12, 1 {
+		zodiacSign == Pisces 
+	}
 
 	// TODO: Assign proper value to zodiacSign using if/else branching.
 	// NOTE: The runes are defined above as constants.
@@ -32,6 +69,7 @@ type FullName struct {
 	LastName  string
 }
 type BirthDate struct {
+	
 	Day   byte
 	Month byte
 	Year  uint16
