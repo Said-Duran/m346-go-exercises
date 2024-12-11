@@ -21,38 +21,31 @@ func outputDateRange(zodiacSign rune) {
 	fmt.Printf("%c: ", zodiacSign)
 	// TODO: Replace if, else if branching with switch/case.
 	// TODO: Define all 12 cases...
-	if zodiacSign == Aries {
-		fmt.Println("21.03. - 20.04")
-	} else if zodiacSign == Taurus {
-		fmt.Println("21.04. - 21.05")
-	} else {
-		fmt.Println("")
-	}
 
 	switch zodiacSign {
-	case 12:
+	case 9800:
 		fmt.Println("21.03. - 20.04")
-	case 11:
+	case 9801:
 		fmt.Println("21.04. - 20.05")
-	case 10:
+	case 9802:
 		fmt.Println("21.05. - 20.06")
-	case 9:
+	case 9803:
 		fmt.Println("21.06. - 20.07")
-	case 8:
+	case 9804:
 		fmt.Println("21.07. - 20.08")
-	case 7:
+	case 9805:
 		fmt.Println("21.08. - 20.09")
-	case 6:
+	case 9806:
 		fmt.Println("21.09. - 20.10")
-	case 5:
+	case 9807:
 		fmt.Println("21.10. - 20.11")
-	case 4:
+	case 9808:
 		fmt.Println("21.11. - 20.12")
-	case 3:
+	case 9809:
 		fmt.Println("21.12. - 20.01")
-	case 2:
+	case 9810:
 		fmt.Println("21.01. - 20.02")
-	case 1:
+	case 9811:
 		fmt.Println("21.02. - 20.03")
 	default:
 		fmt.Println("idk")

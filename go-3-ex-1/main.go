@@ -19,42 +19,33 @@ const (
 
 func outputWithZodiacSign(p Person) {
 	var zodiacSign rune = '?'
-    
-	if p.Day && p.Month == 12, 2 {
-		zodiacSign == Aries 
-	}
-	else if p.Day && p.Month == 12, 3 {
-		zodiacSign == Taurus 
-	}
-	else if p.Day && p.Month == 12, 4 {
-		zodiacSign == Gemini 
-	}
-	else if p.Day && p.Month == 12, 5 {
-		zodiacSign == Cancer 
-	}
-	else if p.Day && p.Month == 12, 6 {
-		zodiacSign == Leo 
-	}
-	else if p.Day && p.Month == 12, 7 {
-		zodiacSign == Virgo 
-	}
-	else if p.Day && p.Month == 12, 8 {
-		zodiacSign == Libra 
-	}
-	else if p.Day && p.Month == 12, 9 {
-		zodiacSign == Scorpius 
-	}
-	else if p.Day && p.Month == 12, 10 {
-		zodiacSign == Saggittarus 
-	}
-	else if p.Day && p.Month == 12, 11 {
-		zodiacSign == Capricornus 
-	}
-	else if p.Day && p.Month == 12, 12 {
-		zodiacSign == Aquarius 
-	}
-	else if p.Day && p.Month == 12, 1 {
-		zodiacSign == Pisces 
+
+	if p.Day >= 12 && p.Month == 2 || p.Day <= 12 && p.Month == 3 {
+		zodiacSign := Aries
+	} else if p.Day == 12 && p.Month == 3 {
+		zodiacSign == Taurus
+	} else if p.Day == 12 && p.Month == 4 {
+		zodiacSign == Gemini
+	} else if p.Day == 12 && p.Month == 5 {
+		zodiacSign == Cancer
+	} else if p.Day == 12 && p.Month == 6 {
+		zodiacSign == Leo
+	} else if p.Day == 12 && p.Month == 7 {
+		zodiacSign == Virgo
+	} else if p.Day == 12 && p.Month == 8 {
+		zodiacSign == Libra
+	} else if p.Day == 12 && p.Month == 9 {
+		zodiacSign == Scorpius
+	} else if p.Day == 12 && p.Month == 10 {
+		zodiacSign == Sagittarius
+	} else if p.Day == 12 && p.Month == 11 {
+		zodiacSign == Capricornus
+	} else if p.Day == 12 && p.Month == 12 {
+		zodiacSign == Aquarius
+	} else if p.Day == 12 && p.Month == 1 {
+		zodiacSign == Pisces
+	} else {
+		fmt.Printf("not found")
 	}
 
 	// TODO: Assign proper value to zodiacSign using if/else branching.
@@ -69,7 +60,6 @@ type FullName struct {
 	LastName  string
 }
 type BirthDate struct {
-	
 	Day   byte
 	Month byte
 	Year  uint16
