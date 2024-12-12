@@ -30,9 +30,10 @@ func main() {
 	for _, n := range ranks {
 		fmt.Println(string(n))
 	} */
+
 	for x := range suits {
 		for _, y := range ranks {
-			// fmt.Printf(string(y), string(x))
+			fmt.Printf(string(y), string(x))
 			fmt.Printf("%c%c\t", suits, ranks)
 
 		}
