@@ -24,18 +24,29 @@ func main() {
 	ranks := []rune{Six, Seven, Eight, Nine, Ten, Jack, Queen, King, Ace}
 
 	// TODO: Loop over suits and ranks to output all combinations.
-	/*for _, x := range suits {
-		fmt.Println(string(x))
-	}
-	for _, n := range ranks {
-		fmt.Println(string(n))
-	} */
 
-	for x := range suits {
-		for _, y := range ranks {
-			fmt.Printf(string(y), string(x))
-			fmt.Printf("%c%c\t", suits, ranks)
+	for _, rank := range suits {
+		for _, suit := range ranks {
+			fmt.Printf("%c%c\t", suit, rank)
 
 		}
+		fmt.Println()
+	}
+
+	cards := map[rune][]rune{
+		Diamonds: {Six, Seven, Eight, Nine, Ten, Jack, Queen, King, Ace},
+		Spades:   {Six, Seven, Eight, Nine, Ten, Jack, Queen, King, Ace},
+		Clubs:    {Six, Seven, Eight, Nine, Ten, Jack, Queen, King, Ace},
+		Hearts:   {Six, Seven, Eight, Nine, Ten, Jack, Queen, King, Ace},
+	}
+
+	fmt.Println("\nAusgabe")
+	for y := 0; y < len(cards[Diamonds]); y++ {
+		for suit, ranks := range cards {
+			// Ausgabe
+			card := fmt.Sprintf("%c%c", suit, ranks[y])
+			fmt.Print(card + "\t")
+		}
+		fmt.Println()
 	}
 }

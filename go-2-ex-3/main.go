@@ -4,7 +4,11 @@ import "fmt"
 
 func main() {
 	// TODO: create a map called "modules"
-	modules := make(map[int]string)
+	modules := map[int]string{
+		104: "Test",
+		117: "lorem ipsum",
+		346: "1234",
+	}
 	fmt.Println("Modul 104:", modules[104])
 	fmt.Println("Modul 117:", modules[117])
 	fmt.Println("Modul 346:", modules[346])
@@ -14,5 +18,7 @@ func main() {
 	// TODO: add one
 	modules[114] = "Modul 114:"
 	// TODO: replace one
-	modules[2] == "Modul 431:", modules[431]
+	modules[2] = "cool"
+
+	fmt.Println(modules)
 }
